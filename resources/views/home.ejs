@@ -1,0 +1,40 @@
+<section class="hero">
+  <div class="container mx-auto flex items-center justify-between my-10">
+    <div class="w-1/2">
+      <h6 class=""><em>Are you hungry ?</em></h6>
+      <h1 class="text-xl lg:text-5xl xl:text-6xl">Don't wait !</h1>
+      <a href="/home" class="inline-block px-6 py-2 my-4 rounded-full font-bold btn-primary text-white">
+        Order now
+      </a>
+    </div>
+    <div class="w-1/2 flex justify-end">
+      <img class="h-1/2 w-2/3" src="/img/pizza-slice.png" alt="Pizza Poster" />
+    </div>
+  </div>
+</section>
+
+<section class="menu container mx-auto py-8">
+  <h1 class="text-xl font-bold mb-8">All Pizza's</h1>
+
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 col-gap-12 gap-y-16">
+    <% data.forEach((pizza)=> { %>
+    <div class="text-center">
+      <img class="h-40 mb-4 mx-auto" src="img/<%= pizza.image %>" alt="order" />
+      <div>
+        <h2 class="mb-4 text-lg"><%= pizza.name %></h2>
+        <span class="py-1 px-4 rounded-full uppercase text-xs"><%= pizza.size %></span>
+        <div class="flex items-center justify-evenly mt-6">
+          <span class="size text-lg font-bold">$<%= pizza.price %></span>
+          <button
+            class="add-to-cart text-center py-1 px-5 rounded-full flex items-center font-bold"
+            data-pizza=" <%= JSON.stringify(pizza) %> "
+          >
+            <span>+</span>
+            <span class="ml-4">Add</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>
