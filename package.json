@@ -6,7 +6,6 @@
   "author": "ganesh shirsat",
   "scripts": {
     "start": "node server .js",
-    "build": "node server .js",
     "serve": "node serve.js",
     "dev": "nodemon server.js",
     "development": "mix",
