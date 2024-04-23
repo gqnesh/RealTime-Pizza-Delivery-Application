@@ -1,0 +1,33 @@
+<section class="orders light-section">
+  <div class="container mx-auto pt-12">
+    <h1 class="font-bold text-lg mb-4">All Orders</h1>
+    <% if (messages.success) { %>
+    <div
+      id="success-alert"
+      class="flex items-center bg-cyan-300 text-white text-sm font-bold px-4 py-3"
+      role="alert"
+    >
+      <img src="/img/received.png" alt="" srcset="" />
+
+      <!-- <span><%#= messages.success %></span> -->
+      <p class="ml-3 text-black"><%= messages.success %></p>
+    </div>
+    <% } %>
+
+    <table class="w-full table-auto bg-white">
+      <thead class="">
+        <tr>
+          <th class="text-left px-4 py-2 left">Orders</th>
+          <th class="text-left px-4 py-2 left">Customers</th>
+          <th class="text-left px-4 py-2">Address</th>
+          <th class="text-left px-4 py-2">Status</th>
+          <th class="text-left px-4 py-2">Placed_at</th>
+          <!-- <th class="text-left px-4 py-2">Order Placed</th> -->
+          <th class="text-left px-4 py-2">Payment Status</th>
+        </tr>
+      </thead>
+
+      <tbody class="text-sm" id="orderTableBody"></tbody>
+    </table>
+  </div>
+</section>

@@ -1,0 +1,66 @@
+1. create directory/project-folder structure
+
+2. create npm/yarn poject and install all dependencies
+    => dependencies
+        -> ExpressJs
+        -> ejs express-ejs-layouts
+    => dev-dependencies
+        -> nodemon
+
+3. create express server -> create server.js file
+
+4. git setup and first commit
+
+5. install laravel mix 
+    -> setup js and css
+
+    for that go to laravel mix web page follow the steps install the laravel remix create webpack.mix.js file define the paths of js and sass file to public js and css file
+
+    define scripts 
+
+    install cross env
+
+    add code to resources js and sass file
+
+    run watch scripts
+
+    again 
+
+    run it
+
+    then 
+
+    start nodemon server
+    
+### Laravel Mix:
+
+**Laravel Mix** is a tool built into the Laravel framework, which provides a fluent API for defining Webpack build steps for your Laravel application. It simplifies the process of compiling CSS and JavaScript files by offering a clean, expressive API over Webpack configurations. Essentially, it abstracts away much of the complexity of configuring Webpack directly, making it easier for developers to manage their frontend assets.
+
+With Laravel Mix, you can easily compile, concatenate, minify, version, and cache-bust your CSS and JavaScript files. It provides a clean and intuitive way to define asset pipelines and is tightly integrated with Laravel's blade templates.
+
+### Webpack:
+
+**Webpack**, on the other hand, is a module bundler for modern JavaScript applications. It takes modules with dependencies and generates static assets representing those modules, along with their dependencies, in a way that browsers can understand. Webpack is highly configurable and can handle a wide variety of asset types, including JavaScript, CSS, images, fonts, and more.
+
+Webpack allows developers to write modular code and manage dependencies efficiently, making it a popular choice for building modern web applications. However, configuring Webpack can be complex, especially for beginners or for smaller projects.
+
+### Integration:
+
+Laravel Mix simplifies the usage of Webpack within Laravel applications by providing a clean and concise API that abstracts away much of the configuration complexity. Developers can define their asset pipelines using familiar Laravel syntax, and Laravel Mix takes care of configuring Webpack under the hood.
+
+In summary, Laravel Mix is a wrapper around Webpack, providing an easier way to configure and manage frontend assets within Laravel applications. It leverages Webpack's power while abstracting away much of its complexity, making it an excellent choice for Laravel developers who want a simple and efficient way to manage frontend assets.
+
+6. Install tailwind css
+
+    use tailwind css cdn
+    
+    
+At the end if we are getting an error about class syntax in frontend cause its js new feature f using class syntax and for that use @babal plugin
+
+i.e. @babel/plugin-proposal-class-properties
+
+and add mix.babelConfig({
+    "plugin":["@babel/plugin-proposal-class-properties"]
+})
+
+inside webpack.mix.js 

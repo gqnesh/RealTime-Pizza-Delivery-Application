@@ -1,0 +1,150 @@
+<section class="login">
+  <!--
+  This example requires some changes to your config:
+  
+  ```
+  // tailwind.config.js
+  module.exports = {
+    // ...
+    plugins: [
+      // ...
+      require('@tailwindcss/forms'),
+    ],
+  }
+  ```
+-->
+  <!--
+  This example requires updating your template:
+
+  ```
+  <html class="h-full bg-white">
+  <body class="h-full">
+  ```
+-->
+  <div class="flex min-h-full flex-col justify-center px-6 pb-6 lg:px-8">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <img class="mx-auto h-10 w-auto" src="img/pizzabox.png" alt="Your Company" />
+      <h2 class="mt-5 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900">
+        Sign Up
+      </h2>
+    </div>
+
+    <div class="mt-10 sm:mx-auto sm:w-full sm:max-w-sm">
+      <form class="space-y-6" action="#" method="POST">
+        <div class="flex items-center justify-between gap-4">
+          <div class="flex-1">
+            <label for="firstname" class="block text-sm font-medium leading-6 text-gray-900"
+              >Firstname</label
+            >
+            <div class="mt-2">
+              <input
+                id="firstname"
+                name="firstname"
+                type="text"
+                placeholder="firstname"
+                value="<%= messages.firstname ? messages.firstname : ''%>"
+                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+          <div class="flex-1">
+            <label
+              for="lastname"
+              class="block text-sm font-medium leading-6 text-gray-900"
+              for="lastname"
+              >Lastname</label
+            >
+            <div class="mt-2">
+              <input
+                id="lastname"
+                name="lastname"
+                type="text"
+                placeholder="lastname"
+                value="<%= messages.lastname ? messages.lastname : ''%>"
+                class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+              />
+            </div>
+          </div>
+        </div>
+        <div>
+          <label for="email" class="block text-sm font-medium leading-6 text-gray-900"
+            >Email address</label
+          >
+          <div class="mt-2">
+            <input
+              id="email"
+              name="email"
+              type="email"
+              autocomplete="email"
+              placeholder="email"
+              value="<%= messages.email ? messages.email : ''%>"
+              class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div>
+          <div class="flex items-center justify-between">
+            <label for="password" class="block text-sm font-medium leading-6 text-gray-900"
+              >Password</label
+            >
+            <!-- <div class="text-sm">
+              <a href="#" class="font-semibold text-orange-600 hover:text-orange-500"
+                >Forgot password?</a
+              >
+            </div> -->
+
+            <% if (messages.error) {%>
+
+            <sapn class="font-semibold text-red-600 hover:text-orange-500">
+              <%= messages.error %>
+            </sapn>
+
+            <% }%>
+          </div>
+          <div class="mt-2">
+            <input
+              id="password"
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              placeholder="password"
+              class="block w-full rounded-md border-0 px-2 py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 sm:text-sm sm:leading-6"
+            />
+          </div>
+        </div>
+
+        <div>
+          <button
+            type="submit"
+            id="loginBtn"
+            class="flex w-full justify-center rounded-md px-3 py-1.5 text-white"
+          >
+            Register
+          </button>
+        </div>
+      </form>
+
+      <a
+        href="/home/auth/google"
+        id="googleSignUp"
+        class="flex w-50 justify-center mt-3 mx-auto rounded-md px-3 py-1.5"
+      >
+        <span class="text-blue-600">G</span>
+        <span class="text-red-600">o</span>
+        <span class="text-yellow-600">o</span>
+        <span class="text-blue-600">g</span>
+        <span class="text-green-600">l</span>
+        <span class="text-red-600">e</span>
+      </a>
+
+      <div class="flex flex-col items-center">
+        <a class="inline-block my-4 text-sm" href="/home/login">Already have account ? </a>
+
+        <p class="text-gray-200 text-sm mb-6 text-center">
+          &copy; 1991 RealPizza. All rights reserved.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
